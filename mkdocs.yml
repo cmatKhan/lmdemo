@@ -1,0 +1,37 @@
+site_name: python package demo
+site_url: 
+site_description: making a python package with poetry
+site_author: cam
+repo_url: 
+edit_uri: blob/main/docs/
+watch: ['lmdemo']
+
+theme:
+  name: readthedocs
+
+plugins:
+- search
+- autorefs
+- section-index
+- mkdocstrings:
+    handlers:
+          python:
+            paths: [lmdemo]  # search packages in the src folder
+            docstring_style: 'google'
+            merge_init_into_class: True
+- mkdocs-jupyter:
+      ignore_h1_titles: True
+
+nav:
+    - Home: index.md
+    - Code:
+      - lnmodest: "code/linmodest.md"
+    - turorials:
+      - lnmodest: 'tutorials/lnmodest.ipynb'
+
+
+markdown_extensions:
+    - smarty
+    - toc:
+        permalink: True
+    - sane_lists
