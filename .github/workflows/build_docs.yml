@@ -13,5 +13,5 @@ jobs:
         with:
           python-version: 3.x
       - run: |
-          pip install lazydocs mkdocs mkdocs-awesome-pages-plugin
+          pip install lazydocs mkdocs mkdocs-awesome-pages-plugin mkdocs-autorefs mkdocstrings-python
       - run: mkdocs gh-deploy --force
