@@ -11,9 +11,11 @@ jobs:
     steps:
       - name: Checkout main
         uses: actions/checkout@v2
+      
+        with:
+          python-version: 3.x
+      - run: pip install mkdocs,mkdocstrings-python,mkdocstrings-python,mkdocs-section-index
 
-      - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
-        # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
+      - run: mkdocs gh-deploy --force --clean --verbose
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
