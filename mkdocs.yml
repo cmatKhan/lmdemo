@@ -22,6 +22,8 @@ plugins:
 
 nav:
     - Home: index.md
+    - Code:
+      - lnmodest: "code/linmodest.md"
 
 markdown_extensions:
     - smarty
