@@ -15,6 +15,7 @@ mkdocs = "^1.4.0"
 mkdocstrings-python = "^0.7.1"
 mkdocs-jupyter = "^0.22.0"
 mkdocs-section-index = "^0.3.4"
+ipykernel = "^6.16.0"
 
 [tool.poetry.scripts]
 lm_demo = "lmdemo:__main__.main"
