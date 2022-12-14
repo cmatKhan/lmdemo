@@ -1,9 +1,12 @@
 [tool.poetry]
 name = "lmDemo"
 version = "0.1.0"
-description = ""
+description = "A package demonstrating how to package python projects"
 authors = ["chase mateusiak <chase.mateusiak@gmail.com>"]
 exclude = ['temp','docs','site']
+readme = "README.rst"
+repository = "https://github.com/cmatKhan/lmdemo"
+keywords = ["packaging","demo"]
 
 [tool.poetry.dependencies]
 python = "^3.9"

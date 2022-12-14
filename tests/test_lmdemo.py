@@ -12,13 +12,6 @@ def test_linmodest(lm_data,caplog):
 
     caplog.set_level(logging.DEBUG)
     
-    expected = {
-        'coef': np.array([-0.3566624,4.0340627]),
-        'vcov': np.array([[0.4792475,-0.17058197], [-0.1705820,0.06263081]]),
-        'sigma': 1.452373,
-        'df':142
-    }
-    
     # this tests that an error is actually raised
     with pytest.raises(ValueError):
         linmodest(lm_data['predictors'], lm_data['response'][:-2])
@@ -38,7 +31,7 @@ def test_linmodest(lm_data,caplog):
     with open('temp/linmodest_time.log', 'a') as f:
         f.write(s.getvalue())
 
-    assert np.allclose(actual['coef'], expected['coef'])
-    assert np.allclose(actual['vcov'], expected['vcov'])
-    assert np.allclose(actual['sigma'], expected['sigma'])
-    assert np.allclose(actual['df'], expected['df'])
+    assert np.allclose(actual['coef'], lm_data['expected']['coef'])
+    assert np.allclose(actual['vcov'], lm_data['expected']['vcov'])
+    assert np.allclose(actual['sigma'], lm_data['expected']['sigma'])
+    assert np.allclose(actual['df'], lm_data['expected']['df'])

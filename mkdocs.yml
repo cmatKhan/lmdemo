@@ -19,9 +19,13 @@ plugins:
             paths: [lmdemo]  # search packages in the src folder
             docstring_style: 'google'
             merge_init_into_class: True
+- mkdocs-jupyter:
+      ignore_h1_titles: True
 
 nav:
     - Home: index.md
+    - Tutorials: 
+       - Simple Linear Regression: "tutorials/linmodest.ipynb"
     - Code:
       - lnmodest: "code/linmodest.md"
 
