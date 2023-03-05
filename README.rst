@@ -14,6 +14,7 @@ Install
 virtual environments in the package directory ([reference](https://python-poetry.org/docs/configuration/#virtualenvsin-project)):
 
 ::
+
   poetry config virtualenvs.in-project true
 
 
